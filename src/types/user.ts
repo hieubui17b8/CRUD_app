@@ -1,9 +1,9 @@
 export interface User {
     id: number;
-    email: string;
+    email?: string;
     first_name: string;
-    last_name: string;
-    avatar: string;
+    last_name?: string;
+    avatar?: string;
 }
 
 export interface DataResponse {
