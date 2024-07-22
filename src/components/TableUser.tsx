@@ -11,7 +11,7 @@ function TableUser() {
     const [totalPages, settotalPages] = useState<number>(0)
     useEffect(() => {
         //   call apis
-        getUsers(2);
+        getUsers(1);
     }, [])
 
     const getUsers = async (page: number) => {
@@ -28,7 +28,8 @@ function TableUser() {
     console.log(listUsers);
 
     const handlePageClick = (event: { selected: number; }) => {
-
+        console.log(event);
+        getUsers(+event.selected + 1);
     };
 
     return (
